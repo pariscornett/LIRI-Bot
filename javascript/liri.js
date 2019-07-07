@@ -1,11 +1,11 @@
 //require all packages necessary to run app
 require("dotenv").config();
 var keys = require("./keys.js");
-//var spotify = new spotify(keys.spotify);
+
 var axios = require("axios");
 var fs = require("fs");
 var moment = require("moment");
-var spotifyRequire = require("node-spotify-api");
+
 
 //global variables
 var command = process.argv[2] //stores the command
@@ -31,5 +31,38 @@ if (command == "concert-this") {
             if(err) throw err;
             console.log(showConcert);
         })
+    }).catch(function(error){
+        console.log(error);
     })
 }
+else if(command == "movie-this") {
+    var moviesURL = "http://www.omdbapi.com/?t=" + input + "&y=&plot=short&apikey=trilogy";
+    axios.get(moviesURL).then(function(response){
+        var moviesResponse = response.data;
+        //console.log(moviesResponse);
+        //console.log(moviesResponse.Ratings[0])
+        var showMovie = [
+            divider,
+            "Title: " + moviesResponse.Title,
+            "Released: " + moviesResponse.Year,
+            "IMDB Rating: " + moviesResponse.Ratings[0].Value,
+            "Rotten Tomatoes Rating: " + moviesResponse.Ratings[1].Value,
+            divider
+        ].join("\n\n");
+
+        fs.appendFile("log.txt", showMovie + divider, function(err) {
+            if(err) throw err;
+            console.log(showMovie);
+        })
+    })
+
+  
+}
+// else if (command == "spotify-this-song") {
+//     var spotifyRequire = require("node-spotify-api");
+//     var spotify = new Spotify(keys.spotify);
+   
+//     spotify.search({type:"track", query: input}).then(function(response){
+//         console.log(response);
+//     });
+//  }
