@@ -47,6 +47,10 @@ else if(command == "movie-this") {
             "Released: " + moviesResponse.Year,
             "IMDB Rating: " + moviesResponse.Ratings[0].Value,
             "Rotten Tomatoes Rating: " + moviesResponse.Ratings[1].Value,
+            "Produced in: " + moviesResponse.Country,
+            "Language: " + moviesResponse.Language,
+            "Plot: " + moviesResponse.Plot,
+            "Actors: " + moviesResponse.Actors,
             divider
         ].join("\n\n");
 
