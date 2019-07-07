@@ -14,21 +14,22 @@ var divider = "\n---------------------------\n";
 
 
 //set up Axios to start making API calls
-var bandsURL = "https://rest.bandsintown.com/artists/" + input + "/events?app_id=codingbootcamp";
-
-axios.get(bandsURL).then(function(response){
-    var concertResponse = response.data[0];
-   // console.log(concertResponse);
-    var showConcert = [
-        divider,
-        "Venue: " + concertResponse.venue.name,
-        "Location: " + concertResponse.venue.city + "," + concertResponse.venue.region,
-        "Date: " + concertResponse.datetime,
-        divider
-    ].join("\n\n");
-
-    fs.appendFile("log.txt", showConcert + divider, function(err){
-        if(err) throw err;
-        console.log(showConcert);
+if (command == "concert-this") {
+    var bandsURL = "https://rest.bandsintown.com/artists/" + input + "/events?app_id=codingbootcamp";
+    axios.get(bandsURL).then(function(response){
+        var concertResponse = response.data[0];
+       // console.log(concertResponse);
+        var showConcert = [
+            divider,
+            "Venue: " + concertResponse.venue.name,
+            "Location: " + concertResponse.venue.city + "," + concertResponse.venue.region,
+            "Date: " + concertResponse.datetime,
+            divider
+        ].join("\n\n");
+    
+        fs.appendFile("log.txt", showConcert + divider, function(err){
+            if(err) throw err;
+            console.log(showConcert);
+        })
     })
-})
+}
