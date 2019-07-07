@@ -1,7 +1,6 @@
 //require all packages necessary to run app
 require("dotenv").config();
 var keys = require("./keys.js");
-
 var axios = require("axios");
 var fs = require("fs");
 var moment = require("moment");
@@ -23,7 +22,7 @@ if (command == "concert-this") {
             divider,
             "Venue: " + concertResponse.venue.name,
             "Location: " + concertResponse.venue.city + "," + concertResponse.venue.region,
-            "Date: " + concertResponse.datetime,
+            "Date: " + moment(concertResponse.datetime).format("MMM Do YYYY"),
             divider
         ].join("\n\n");
     
@@ -60,14 +59,16 @@ else if(command == "movie-this") {
         })
     })  
 }
-// else if (command == "spotify-this-song") {
-//     var spotifyRequire = require("node-spotify-api");
-//     var spotify = new Spotify ({
-//         id: "b3b2887fefce4f5ca159c852e25e2886",
-//         secret: "566a9e14d1c34aab8eda4523db8bc5cb"
-//     });
-   
-//     spotify.search({type:"track", query: input}).then(function(response){
-//         console.log(response);
-//     });
-//  }
+else if (command == "spotify-this-song") {
+    var spotifyRequire = require("node-spotify-api");
+    var spotify = new Spotify ({
+        id: "b3b2887fefce4f5ca159c852e25e2886",
+        secret: "566a9e14d1c34aab8eda4523db8bc5cb"
+    });
+    spotify.search({type:"track", query: input}).then(function(response){
+        console.log(response.data);
+    });
+}
+
+
+       
