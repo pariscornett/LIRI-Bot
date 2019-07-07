@@ -112,3 +112,121 @@ Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
 ---------------------------
 
 ---------------------------
+
+---------------------------
+
+
+Venue: The Ritz Ybor
+
+Location: Tampa,FL
+
+Date: 2019-09-19T19:00:00
+
+
+---------------------------
+
+---------------------------
+
+---------------------------
+
+
+Venue: The Ritz Ybor
+
+Location: Tampa,FL
+
+Date: 2019-09-19T19:00:00
+
+
+---------------------------
+
+---------------------------
+
+---------------------------
+
+
+Venue: Theatro Avenida
+
+Location: Pinhal,
+
+Date: 2019-11-09T20:00:00
+
+
+---------------------------
+
+---------------------------
+
+---------------------------
+
+
+Venue: Theatro Avenida
+
+Location: Pinhal,
+
+Date: 2019-11-09T20:00:00
+
+
+---------------------------
+
+---------------------------
+
+---------------------------
+
+
+Title: Mr. Nobody
+
+Released: 2009
+
+IMDB Rating: 7.8/10
+
+Rotten Tomatoes Rating: 67%
+
+Produced in: Belgium, Germany, Canada, France, USA, UK
+
+Language: English, Mohawk
+
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+
+---------------------------
+
+---------------------------
+
+---------------------------
+
+
+Title: Donnie Darko
+
+Released: 2001
+
+IMDB Rating: 8.1/10
+
+Rotten Tomatoes Rating: 87%
+
+Produced in: USA
+
+Language: English
+
+Plot: A troubled teenager is plagued by visions of a man in a large rabbit suit who manipulates him to commit a series of crimes, after he narrowly escapes a bizarre accident.
+
+Actors: Jake Gyllenhaal, Holmes Osborne, Maggie Gyllenhaal, Daveigh Chase
+
+
+---------------------------
+
+---------------------------
+
+---------------------------
+
+
+Venue: The Ritz Ybor
+
+Location: Tampa,FL
+
+Date: 2019-09-19T19:00:00
+
+
+---------------------------
+
+---------------------------
