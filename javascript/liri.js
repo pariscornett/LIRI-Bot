@@ -66,12 +66,20 @@ else if (command == "spotify-this-song") {
         secret: "566a9e14d1c34aab8eda4523db8bc5cb"
     });
     spotify.search({type:"track", query: input}).then(function(response){
-        console.log(response.tracks.items[0].name);
         var spotifyResponse = response.tracks.items[0]
+        console.log(spotifyResponse);
         var showSpotify = [
             divider,
-            "Name: " + spotifyResponse.name,
-        ]
+            "Artist Name: " + spotifyResponse.name,
+            "Song Name: " + spotifyResponse.artists[0].name,
+            "Preview Link: " + spotifyResponse.artists[0].external_urls.spotify,
+            divider
+        ].join("\n\n");
+
+        fs.appendFile("log.txt", showSpotify + divider, function (err) {
+            if (err) throw err;
+            console.log(showSpotify);
+        })
     });
 }
 
