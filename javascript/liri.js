@@ -1,5 +1,5 @@
 //require all packages necessary to run app
-require("dotenv").config();
+require("dotenv").config()
 var keys = require("./keys.js");
 var axios = require("axios");
 var fs = require("fs");
@@ -60,13 +60,18 @@ else if(command == "movie-this") {
     })  
 }
 else if (command == "spotify-this-song") {
-    var spotifyRequire = require("node-spotify-api");
+    var Spotify = require("node-spotify-api");
     var spotify = new Spotify ({
         id: "b3b2887fefce4f5ca159c852e25e2886",
         secret: "566a9e14d1c34aab8eda4523db8bc5cb"
     });
     spotify.search({type:"track", query: input}).then(function(response){
-        console.log(response.data);
+        console.log(response.tracks.items[0].name);
+        var spotifyResponse = response.tracks.items[0]
+        var showSpotify = [
+            divider,
+            "Name: " + spotifyResponse.name,
+        ]
     });
 }
 
